@@ -60,7 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -72,20 +71,20 @@ set rc [catch {
   set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/OWNER/Desktop/Vivado_projects/connect_stuff_hopefully/connect_stuff_hopefully.cache/wt [current_project]
-  set_property parent.project_path C:/Users/OWNER/Desktop/Vivado_projects/connect_stuff_hopefully/connect_stuff_hopefully.xpr [current_project]
-  set_property ip_output_repo C:/Users/OWNER/Desktop/Vivado_projects/connect_stuff_hopefully/connect_stuff_hopefully.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/OWNER/Desktop/Vivado_projects/SPRO4_2/connect_stuff_hopefully/connect_stuff_hopefully.cache/wt [current_project]
+  set_property parent.project_path C:/Users/OWNER/Desktop/Vivado_projects/SPRO4_2/connect_stuff_hopefully/connect_stuff_hopefully.xpr [current_project]
+  set_property ip_output_repo C:/Users/OWNER/Desktop/Vivado_projects/SPRO4_2/connect_stuff_hopefully/connect_stuff_hopefully.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet C:/Users/OWNER/Desktop/Vivado_projects/connect_stuff_hopefully/connect_stuff_hopefully.runs/synth_1/audio_testbench.dcp
-  read_ip -quiet C:/Users/OWNER/Desktop/Vivado_projects/connect_stuff_hopefully/connect_stuff_hopefully.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci
-  read_ip -quiet C:/Users/OWNER/Desktop/Vivado_projects/connect_stuff_hopefully/connect_stuff_hopefully.srcs/sources_1/ip/fir_compiler_1/fir_compiler_1.xci
-  read_ip -quiet C:/Users/OWNER/Desktop/Vivado_projects/connect_stuff_hopefully/connect_stuff_hopefully.srcs/sources_1/ip/fir_compiler_2/fir_compiler_2.xci
-  read_ip -quiet C:/Users/OWNER/Desktop/Vivado_projects/connect_stuff_hopefully/connect_stuff_hopefully.srcs/sources_1/ip/fir_compiler_3/fir_compiler_3.xci
-  read_ip -quiet C:/Users/OWNER/Desktop/Vivado_projects/connect_stuff_hopefully/connect_stuff_hopefully.srcs/sources_1/ip/fir_compiler_4/fir_compiler_4.xci
-  read_ip -quiet C:/Users/OWNER/Desktop/Vivado_projects/connect_stuff_hopefully/connect_stuff_hopefully.srcs/sources_1/ip/fir_compiler_5/fir_compiler_5.xci
-  read_ip -quiet C:/Users/OWNER/Desktop/Vivado_projects/connect_stuff_hopefully/connect_stuff_hopefully.srcs/sources_1/ip/fir_compiler_6/fir_compiler_6.xci
-  read_ip -quiet C:/Users/OWNER/Desktop/Vivado_projects/connect_stuff_hopefully/connect_stuff_hopefully.srcs/sources_1/ip/fir_compiler_7/fir_compiler_7.xci
-  read_xdc C:/Users/OWNER/Desktop/Vivado_projects/connect_stuff_hopefully/connect_stuff_hopefully.srcs/constrs_1/imports/constraints/zed_audio.xdc
+  add_files -quiet C:/Users/OWNER/Desktop/Vivado_projects/SPRO4_2/connect_stuff_hopefully/connect_stuff_hopefully.runs/synth_1/audio_testbench.dcp
+  read_ip -quiet C:/Users/OWNER/Desktop/Vivado_projects/SPRO4_2/connect_stuff_hopefully/connect_stuff_hopefully.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci
+  read_ip -quiet C:/Users/OWNER/Desktop/Vivado_projects/SPRO4_2/connect_stuff_hopefully/connect_stuff_hopefully.srcs/sources_1/ip/fir_compiler_1/fir_compiler_1.xci
+  read_ip -quiet C:/Users/OWNER/Desktop/Vivado_projects/SPRO4_2/connect_stuff_hopefully/connect_stuff_hopefully.srcs/sources_1/ip/fir_compiler_2/fir_compiler_2.xci
+  read_ip -quiet C:/Users/OWNER/Desktop/Vivado_projects/SPRO4_2/connect_stuff_hopefully/connect_stuff_hopefully.srcs/sources_1/ip/fir_compiler_3/fir_compiler_3.xci
+  read_ip -quiet C:/Users/OWNER/Desktop/Vivado_projects/SPRO4_2/connect_stuff_hopefully/connect_stuff_hopefully.srcs/sources_1/ip/fir_compiler_4/fir_compiler_4.xci
+  read_ip -quiet C:/Users/OWNER/Desktop/Vivado_projects/SPRO4_2/connect_stuff_hopefully/connect_stuff_hopefully.srcs/sources_1/ip/fir_compiler_5/fir_compiler_5.xci
+  read_ip -quiet C:/Users/OWNER/Desktop/Vivado_projects/SPRO4_2/connect_stuff_hopefully/connect_stuff_hopefully.srcs/sources_1/ip/fir_compiler_6/fir_compiler_6.xci
+  read_ip -quiet C:/Users/OWNER/Desktop/Vivado_projects/SPRO4_2/connect_stuff_hopefully/connect_stuff_hopefully.srcs/sources_1/ip/fir_compiler_7/fir_compiler_7.xci
+  read_xdc C:/Users/OWNER/Desktop/Vivado_projects/SPRO4_2/connect_stuff_hopefully/connect_stuff_hopefully.srcs/constrs_1/imports/constraints/zed_audio.xdc
   link_design -top audio_testbench -part xc7z020clg484-1
   close_msg_db -file init_design.pb
 } RESULT]

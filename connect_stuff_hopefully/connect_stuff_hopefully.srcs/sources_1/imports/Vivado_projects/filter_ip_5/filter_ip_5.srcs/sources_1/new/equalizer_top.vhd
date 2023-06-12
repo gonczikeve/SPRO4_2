@@ -288,14 +288,14 @@ begin
     if(falling_edge(clock)) then
         if(filter0_complete = '1') then
             --apply gain
-            gain0_to_sum <= to_stdlogicvector(to_bitvector(filter0_to_gain0) sra to_integer(unsigned(gain0)));
-            gain1_to_sum <= to_stdlogicvector(to_bitvector(filter1_to_gain1) sra to_integer(unsigned(gain1)));
-            gain2_to_sum <= to_stdlogicvector(to_bitvector(filter2_to_gain2) sra to_integer(unsigned(gain2)));
-            gain3_to_sum <= to_stdlogicvector(to_bitvector(filter3_to_gain3) sra to_integer(unsigned(gain3)));
-            gain4_to_sum <= to_stdlogicvector(to_bitvector(filter4_to_gain4) sra to_integer(unsigned(gain4)));
-            gain5_to_sum <= to_stdlogicvector(to_bitvector(filter5_to_gain5) sra to_integer(unsigned(gain5)));
-            gain6_to_sum <= to_stdlogicvector(to_bitvector(filter6_to_gain6) sra to_integer(unsigned(gain6)));
-            gain7_to_sum <= to_stdlogicvector(to_bitvector(filter7_to_gain7) sra to_integer(unsigned(gain7)));
+            gain0_to_sum <= to_stdlogicvector(to_bitvector(filter0_to_gain0) sra to_integer(signed(gain0)));
+            gain1_to_sum <= to_stdlogicvector(to_bitvector(filter1_to_gain1) sra to_integer(signed(gain1)));
+            gain2_to_sum <= to_stdlogicvector(to_bitvector(filter2_to_gain2) sra to_integer(signed(gain2)));
+            gain3_to_sum <= to_stdlogicvector(to_bitvector(filter3_to_gain3) sra to_integer(signed(gain3)));
+            gain4_to_sum <= to_stdlogicvector(to_bitvector(filter4_to_gain4) sra to_integer(signed(gain4)));
+            gain5_to_sum <= to_stdlogicvector(to_bitvector(filter5_to_gain5) sra to_integer(signed(gain5)));
+            gain6_to_sum <= to_stdlogicvector(to_bitvector(filter6_to_gain6) sra to_integer(signed(gain6)));
+            gain7_to_sum <= to_stdlogicvector(to_bitvector(filter7_to_gain7) sra to_integer(signed(gain7)));
             
             state <= 1;
         elsif(state = 1) then

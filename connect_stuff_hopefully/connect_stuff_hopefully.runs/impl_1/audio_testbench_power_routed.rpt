@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Sun Jun 11 15:39:52 2023
+| Date             : Mon Jun 12 11:57:39 2023
 | Host             : DESKTOP-L3VUCB2 running 64-bit major release  (build 9200)
 | Command          : report_power -file audio_testbench_power_routed.rpt -pb audio_testbench_power_summary_routed.pb -rpx audio_testbench_power_routed.rpx
 | Design           : audio_testbench
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.366        |
+| Total On-Chip Power (W)  | 0.367        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.255        |
+| Dynamic (W)              | 0.257        |
 | Device Static (W)        | 0.111        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 80.8         |
@@ -52,22 +52,22 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.018 |        5 |       --- |             --- |
-| Slice Logic             |     0.007 |     9137 |       --- |             --- |
-|   LUT as Logic          |     0.005 |     2901 |     53200 |            5.45 |
-|   CARRY4                |    <0.001 |      144 |     13300 |            1.08 |
-|   Register              |    <0.001 |     4347 |    106400 |            4.09 |
+| Clocks                  |     0.019 |        5 |       --- |             --- |
+| Slice Logic             |     0.007 |    12144 |       --- |             --- |
+|   LUT as Logic          |     0.005 |     4899 |     53200 |            9.21 |
+|   CARRY4                |    <0.001 |      224 |     13300 |            1.68 |
+|   Register              |    <0.001 |     4403 |    106400 |            4.14 |
 |   LUT as Shift Register |    <0.001 |      310 |     17400 |            1.78 |
-|   F7/F8 Muxes           |    <0.001 |      219 |     53200 |            0.41 |
-|   Others                |     0.000 |      500 |       --- |             --- |
+|   F7/F8 Muxes           |    <0.001 |      795 |     53200 |            1.49 |
+|   Others                |     0.000 |      503 |       --- |             --- |
 |   BUFG                  |     0.000 |        1 |        32 |            3.13 |
-| Signals                 |     0.019 |     7192 |       --- |             --- |
+| Signals                 |     0.019 |     8748 |       --- |             --- |
 | Block RAM               |     0.066 |       17 |       140 |           12.14 |
 | MMCM                    |     0.121 |        1 |         4 |           25.00 |
 | DSPs                    |     0.018 |       16 |       220 |            7.27 |
 | I/O                     |     0.007 |       75 |       200 |           37.50 |
 | Static Power            |     0.111 |          |           |                 |
-| Total                   |     0.366 |          |           |                 |
+| Total                   |     0.367 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.131 |       0.123 |      0.009 |
+| Vccint    |       1.000 |     0.133 |       0.125 |      0.009 |
 | Vccaux    |       1.800 |     0.078 |       0.067 |      0.011 |
 | Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -152,48 +152,49 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-----------------------------+-----------+
-| Name                        | Power (W) |
-+-----------------------------+-----------+
-| audio_testbench             |     0.255 |
-|   equalizer_left            |     0.061 |
-|     filter0                 |     0.007 |
-|       U0                    |     0.007 |
-|     filter1                 |     0.008 |
-|       U0                    |     0.008 |
-|     filter2                 |     0.007 |
-|       U0                    |     0.007 |
-|     filter3                 |     0.007 |
-|       U0                    |     0.007 |
-|     filter4                 |     0.007 |
-|       U0                    |     0.007 |
-|     filter5                 |     0.008 |
-|       U0                    |     0.008 |
-|     filter6                 |     0.007 |
-|       U0                    |     0.007 |
-|     filter7                 |     0.007 |
-|       U0                    |     0.007 |
-|   equalizer_right           |     0.061 |
-|     filter0                 |     0.008 |
-|       U0                    |     0.008 |
-|     filter1                 |     0.007 |
-|       U0                    |     0.007 |
-|     filter2                 |     0.007 |
-|       U0                    |     0.007 |
-|     filter3                 |     0.008 |
-|       U0                    |     0.008 |
-|     filter4                 |     0.007 |
-|       U0                    |     0.007 |
-|     filter5                 |     0.007 |
-|       U0                    |     0.007 |
-|     filter6                 |     0.007 |
-|       U0                    |     0.007 |
-|     filter7                 |     0.007 |
-|       U0                    |     0.007 |
-|   i_audio                   |     0.124 |
-|     Inst_adau1761_izedboard |     0.002 |
-|     i_clocking              |     0.121 |
-|   oled_and_stuff            |     0.001 |
-+-----------------------------+-----------+
++-------------------------------+-----------+
+| Name                          | Power (W) |
++-------------------------------+-----------+
+| audio_testbench               |     0.257 |
+|   equalizer_left              |     0.062 |
+|     filter0                   |     0.008 |
+|       U0                      |     0.008 |
+|     filter1                   |     0.007 |
+|       U0                      |     0.007 |
+|     filter2                   |     0.008 |
+|       U0                      |     0.008 |
+|     filter3                   |     0.007 |
+|       U0                      |     0.007 |
+|     filter4                   |     0.007 |
+|       U0                      |     0.007 |
+|     filter5                   |     0.008 |
+|       U0                      |     0.008 |
+|     filter6                   |     0.007 |
+|       U0                      |     0.007 |
+|     filter7                   |     0.008 |
+|       U0                      |     0.008 |
+|   equalizer_right             |     0.062 |
+|     filter0                   |     0.008 |
+|       U0                      |     0.008 |
+|     filter1                   |     0.007 |
+|       U0                      |     0.007 |
+|     filter2                   |     0.007 |
+|       U0                      |     0.007 |
+|     filter3                   |     0.007 |
+|       U0                      |     0.007 |
+|     filter4                   |     0.007 |
+|       U0                      |     0.007 |
+|     filter5                   |     0.007 |
+|       U0                      |     0.007 |
+|     filter6                   |     0.008 |
+|       U0                      |     0.008 |
+|     filter7                   |     0.008 |
+|       U0                      |     0.008 |
+|   i_audio                     |     0.125 |
+|     Inst_adau1761_izedboard   |     0.002 |
+|       Inst_i2c                |     0.001 |
+|       Inst_i2s_data_interface |     0.001 |
+|     i_clocking                |     0.121 |
++-------------------------------+-----------+
 
 
